@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specifications", "Specifications\Specifications.csproj", "{A175A556-E550-42D9-A306-86F1D53D6016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{5D8D5942-0A90-48DB-86C4-ADDC3867F78E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{5EA30EB3-ACC7-4DF7-8E65-6F8167055664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{E2371971-0CDB-4210-9141-FE8CAAAB258F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.appliedsystems.co.uk:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Specifications\\Specifications.csproj
+		SccProjectName1 = Specifications
+		SccLocalPath1 = Specifications
+		SccProjectUniqueName2 = Infrastructure\\Infrastructure.csproj
+		SccProjectName2 = Infrastructure
+		SccLocalPath2 = Infrastructure
+		SccProjectUniqueName3 = Domain\\Domain.csproj
+		SccProjectName3 = Domain
+		SccLocalPath3 = Domain
+		SccProjectUniqueName4 = Messages\\Messages.csproj
+		SccProjectName4 = Messages
+		SccLocalPath4 = Messages
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A175A556-E550-42D9-A306-86F1D53D6016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A175A556-E550-42D9-A306-86F1D53D6016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A175A556-E550-42D9-A306-86F1D53D6016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A175A556-E550-42D9-A306-86F1D53D6016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D8D5942-0A90-48DB-86C4-ADDC3867F78E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D8D5942-0A90-48DB-86C4-ADDC3867F78E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D8D5942-0A90-48DB-86C4-ADDC3867F78E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D8D5942-0A90-48DB-86C4-ADDC3867F78E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA30EB3-ACC7-4DF7-8E65-6F8167055664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA30EB3-ACC7-4DF7-8E65-6F8167055664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA30EB3-ACC7-4DF7-8E65-6F8167055664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA30EB3-ACC7-4DF7-8E65-6F8167055664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2371971-0CDB-4210-9141-FE8CAAAB258F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2371971-0CDB-4210-9141-FE8CAAAB258F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2371971-0CDB-4210-9141-FE8CAAAB258F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2371971-0CDB-4210-9141-FE8CAAAB258F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
