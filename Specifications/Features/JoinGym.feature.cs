@@ -89,6 +89,8 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("I join the gym stating the following details:", ((string)(null)), table1, "When ");
 #line 11
  testRunner.Then("a gym membership should have been created with an id of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+ testRunner.And("that membership should be for a member who was born on \'1975-09-21\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

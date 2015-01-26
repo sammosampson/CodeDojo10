@@ -17,13 +17,7 @@
             entities.TryAdd(toAdd, toAdd);
         }
 
-        public void Remove<T>(T toRemove) where T : IdEqualityBase<T>
-        {
-            object temp;
-            entities.TryRemove(toRemove, out temp);
-        }
-
-        public IQueryable<T> Query<T>() where T : IdEqualityBase<T>
+        private IQueryable<T> Query<T>() where T : IdEqualityBase<T>
         {
             return entities.Values.OfType<T>().AsQueryable();
         }

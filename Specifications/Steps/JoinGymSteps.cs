@@ -34,6 +34,12 @@ namespace Gym.Specifications.Steps
             membership.Should().NotBeNull();
         }
 
+        [Then(@"that membership should be for a member who was born on '(.*)'")]
+        public void ThenThatMembershipShouldBeForAMemberWhoWasBornOn(DateTime dateOfBirth)
+        {
+            membership.DateOfBirth.Should().Be(dateOfBirth);
+        }
+        
         [StepArgumentTransformation]
         private JoinGym ConvertTableToJoinGymCommand(Table table)
         {

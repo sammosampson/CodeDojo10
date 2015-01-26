@@ -9,4 +9,4 @@ Scenario: Joining creates membership with a year of standard membership payments
 	| Id | Date of birth |
 	| 1  | 1975-09-21    |
 	Then a gym membership should have been created with an id of 1
-	
+	And that membership should be for a member who was born on '1975-09-21'
