@@ -1,14 +1,20 @@
 namespace Gym.Domain
 {
-    using System;
     using Gym.Infrastructure;
     using Gym.Messages;
 
     public class JoinGymCommandHandler : ICommandHandler<JoinGym>
     {
+        private readonly Repository repository;
+
+        public JoinGymCommandHandler(Repository repository)
+        {
+            this.repository = repository;
+        }
+
         public void Handle(JoinGym command)
         {
-            throw new NotImplementedException();
+            repository.Add(new Membership(MembershipId.Parse(command.Id)));
         }
     }
 }

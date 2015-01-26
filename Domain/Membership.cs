@@ -1,8 +1,12 @@
 namespace Gym.Domain
 {
-    using SystemDot.RelationalDataStore;
+    using Gym.Infrastructure;
 
     public class Membership : IdEqualityBase<Membership>
     {
+        public Membership(MembershipId id)
+        {
+            Id = id;
+        }
     }
 }

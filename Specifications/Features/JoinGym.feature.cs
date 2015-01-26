@@ -31,7 +31,7 @@ namespace Gym.Specifications.Features
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "JoinGym", "In order to get fit\nAs a potential gym member\nI want to join the gym", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "JoinGym", "In order to get fit\r\nAs a potential gym member\r\nI want to join the gym", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -84,7 +84,7 @@ this.ScenarioSetup(scenarioInfo);
                         "Date of birth"});
             table1.AddRow(new string[] {
                         "1",
-                        "21-09-1975"});
+                        "1975-09-21"});
 #line 8
  testRunner.When("I join the gym stating the following details:", ((string)(null)), table1, "When ");
 #line 11

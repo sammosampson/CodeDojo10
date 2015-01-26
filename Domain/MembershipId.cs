@@ -1,17 +1,24 @@
 namespace Gym.Domain
 {
-    using System;
+    using System.Globalization;
 
     public class MembershipId 
     {
-        public static implicit operator string(MembershipId from)
+        private readonly int id;
+
+        private MembershipId(int id)
         {
-            return string.Empty;
+            this.id = id;
         }
 
-        public static string Parse(int id)
+        public static implicit operator string(MembershipId from)
         {
-            throw new NotImplementedException();
+            return from.id.ToString(CultureInfo.InvariantCulture);
+        }
+
+        public static MembershipId Parse(int id)
+        {
+            return new MembershipId(id);
         }
     }
 }

@@ -56,12 +56,6 @@
     <Reference Include="SystemDot.Reflection.Windows">
       <HintPath>..\packages\SystemDotReflection.1.0.1\lib\net\SystemDot.Reflection.Windows.dll</HintPath>
     </Reference>
-    <Reference Include="SystemDot.RelationalDataStore">
-      <HintPath>..\packages\SystemDotRelationalDataStore.1.0.1\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.RelationalDataStore.dll</HintPath>
-    </Reference>
-    <Reference Include="SystemDot.RelationalDataStore.InMemory">
-      <HintPath>..\packages\SystemDotRelationalDataStore.1.0.1\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.RelationalDataStore.InMemory.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JoinGymCommandHandler.cs" />
