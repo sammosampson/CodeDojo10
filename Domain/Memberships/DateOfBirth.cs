@@ -1,4 +1,4 @@
-namespace Gym.Domain
+namespace Gym.Domain.Memberships
 {
     using System;
     using SystemDot.Core;

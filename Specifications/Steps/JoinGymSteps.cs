@@ -3,6 +3,7 @@ namespace Gym.Specifications.Steps
 {
     using System;
     using Gym.Domain;
+    using Gym.Domain.Memberships;
     using Gym.Infrastructure;
     using Gym.Messages;
     using TechTalk.SpecFlow;
@@ -38,6 +39,12 @@ namespace Gym.Specifications.Steps
         public void ThenThatMembershipShouldBeForAMemberWhoWasBornOn(DateTime dateOfBirth)
         {
             membership.DateOfBirth.Should().Be(DateOfBirth.Parse(dateOfBirth));
+        }
+
+        [Then(@"that membership should have a monthly fee of £(.*)")]
+        public void ThenThatMembershipShouldHaveAMonthlyFeeOf(Decimal fee)
+        {
+            membership.Fee.Should().Be(Money.Parse(fee));
         }
         
         [StepArgumentTransformation]

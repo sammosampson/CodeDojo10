@@ -1,4 +1,4 @@
-namespace Gym.Domain
+namespace Gym.Domain.Memberships
 {
     using Gym.Infrastructure;
     using Gym.Messages;

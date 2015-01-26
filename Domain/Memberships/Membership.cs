@@ -1,6 +1,5 @@
-namespace Gym.Domain
+namespace Gym.Domain.Memberships
 {
-    using System;
     using Gym.Infrastructure;
 
     public class Membership : IdEqualityBase<Membership>
@@ -11,11 +10,13 @@ namespace Gym.Domain
         }
 
         public DateOfBirth DateOfBirth { get; private set; }
+        public Money Fee { get; private set; }
 
         private Membership(MembershipId id, DateOfBirth dateOfBirth)
         {
-            DateOfBirth = dateOfBirth;
             Id = id;
+            DateOfBirth = dateOfBirth;
+            Fee = Money.Parse(50M);
         }
     }
 }

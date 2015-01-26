@@ -4,7 +4,7 @@ namespace Gym.Infrastructure
 
     public abstract class IdEqualityBase<T> : Equatable<T> where T : IdEqualityBase<T>
     {
-        public string Id { get; set; }
+        public string Id { get; protected set; }
 
         public override bool Equals(T other)
         {

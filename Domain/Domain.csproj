@@ -61,10 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DateOfBirth.cs" />
-    <Compile Include="JoinGymCommandHandler.cs" />
-    <Compile Include="Membership.cs" />
-    <Compile Include="MembershipId.cs" />
+    <Compile Include="Memberships\DateOfBirth.cs" />
+    <Compile Include="Memberships\JoinGymCommandHandler.cs" />
+    <Compile Include="Memberships\Membership.cs" />
+    <Compile Include="Memberships\MembershipId.cs" />
+    <Compile Include="Memberships\Money.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
