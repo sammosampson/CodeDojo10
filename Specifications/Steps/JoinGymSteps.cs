@@ -37,7 +37,7 @@ namespace Gym.Specifications.Steps
         [Then(@"that membership should be for a member who was born on '(.*)'")]
         public void ThenThatMembershipShouldBeForAMemberWhoWasBornOn(DateTime dateOfBirth)
         {
-            membership.DateOfBirth.Should().Be(dateOfBirth);
+            membership.DateOfBirth.Should().Be(DateOfBirth.Parse(dateOfBirth));
         }
         
         [StepArgumentTransformation]

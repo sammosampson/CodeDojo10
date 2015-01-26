@@ -5,9 +5,14 @@ namespace Gym.Domain
 
     public class Membership : IdEqualityBase<Membership>
     {
-        public DateTime DateOfBirth { get; private set; }
+        public static Membership Start(MembershipId id, DateOfBirth dateOfBirth)
+        {
+            return new Membership(id, dateOfBirth);
+        }
 
-        public Membership(MembershipId id, DateTime dateOfBirth)
+        public DateOfBirth DateOfBirth { get; private set; }
+
+        private Membership(MembershipId id, DateOfBirth dateOfBirth)
         {
             DateOfBirth = dateOfBirth;
             Id = id;

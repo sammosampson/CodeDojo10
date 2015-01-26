@@ -14,7 +14,10 @@ namespace Gym.Domain
 
         public void Handle(JoinGym command)
         {
-            repository.Add(new Membership(MembershipId.Parse(command.Id), command.DateOfBirth));
+            repository.Add(
+                Membership.Start(
+                    MembershipId.Parse(command.Id), 
+                    DateOfBirth.Parse(command.DateOfBirth)));
         }
     }
 }
