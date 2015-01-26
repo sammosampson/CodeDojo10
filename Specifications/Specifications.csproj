@@ -85,6 +85,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JoinGym.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\PensionerDiscount.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PensionerDiscount.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\Bootstrapper.cs" />
     <Compile Include="Steps\JoinGymSteps.cs" />
@@ -94,6 +99,10 @@
     <None Include="Features\JoinGym.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>JoinGym.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\PensionerDiscount.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PensionerDiscount.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

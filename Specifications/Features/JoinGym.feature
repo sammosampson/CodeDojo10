@@ -4,7 +4,7 @@
 	I want to join the gym
 
 @mytag
-Scenario: Joining creates membership with a year of standard membership payments setup
+Scenario: Joining creates membership standard membership fees setup
 	When I join the gym stating the following details:
 	| Id | Date of birth |
 	| 1  | 1975-09-21    |

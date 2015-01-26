@@ -19,19 +19,20 @@ namespace Gym.Specifications.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.3.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class JoinGymFeature
+    public partial class PensionerDiscountFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "JoinGym.feature"
+#line 1 "PensionerDiscount.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "JoinGym", "In order to get fit\r\nAs a potential gym member\r\nI want to join the gym", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PensionerDiscount", "In order to attract more members\nAs a gym marketing person\nI want to allow anyone" +
+                    " over 65 who joins a 10% discount", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -46,9 +47,9 @@ namespace Gym.Specifications.Features
         public virtual void TestInitialize()
         {
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
-                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "JoinGym")))
+                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "PensionerDiscount")))
             {
-                Gym.Specifications.Features.JoinGymFeature.FeatureSetup(null);
+                Gym.Specifications.Features.PensionerDiscountFeature.FeatureSetup(null);
             }
         }
         
@@ -69,15 +70,19 @@ namespace Gym.Specifications.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Joining creates membership standard membership fees setup")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "JoinGym")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void JoiningCreatesMembershipStandardMembershipFeesSetup()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Joining as an over 65 year old creates membership with discounted membership fees" +
+            " setup")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PensionerDiscount")]
+        public virtual void JoiningAsAnOver65YearOldCreatesMembershipWithDiscountedMembershipFeesSetup()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Joining creates membership standard membership fees setup", new string[] {
-                        "mytag"});
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Joining as an over 65 year old creates membership with discounted membership fees" +
+                    " setup", ((string[])(null)));
+#line 6
 this.ScenarioSetup(scenarioInfo);
+#line 7
+ testRunner.Given("the date is \'2010-01-01\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
+ testRunner.And("A promotion is setup for the over 65\'s at a discount of 10%", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Id",
@@ -85,14 +90,12 @@ this.ScenarioSetup(scenarioInfo);
             table1.AddRow(new string[] {
                         "1",
                         "1975-09-21"});
-#line 8
+#line 9
  testRunner.When("I join the gym stating the following details:", ((string)(null)), table1, "When ");
-#line 11
- testRunner.Then("a gym membership should have been created with an id of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 12
- testRunner.And("that membership should be for a member who was born on \'1975-09-21\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("a gym membership should have been created with an id of 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 13
- testRunner.And("that membership should have a monthly fee of £50.00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("that membership should have a monthly fee of £45.00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
