@@ -2,30 +2,30 @@
 namespace Gym.Specifications.Steps
 {
     using System;
-    using Gym.Domain;
-    using Gym.Domain.Memberships;
-    using Gym.Infrastructure;
-    using Gym.Messages;
+    using Domain;
+    using Domain.Memberships;
+    using Infrastructure;
+    using Messages;
     using TechTalk.SpecFlow;
     using FluentAssertions;
 
     [Binding]
-    public class JoinGymSteps
+    public class MembershipSteps
     {
-        private readonly JoinGymCommandHandler joinGymCommandHandler;
+        private readonly JoinGymHandler joinGymHandler;
         private readonly Repository repository;
         private Membership membership;
 
-        public JoinGymSteps(Repository repository)
+        public MembershipSteps(Repository repository, JoinGymHandler joinGymHandler)
         {
-            joinGymCommandHandler = new JoinGymCommandHandler(repository);
+            this.joinGymHandler = joinGymHandler;
             this.repository = repository;
         }
 
         [When(@"I join the gym stating the following details:")]
         public void WhenIJoinTheGymStatingTheFollowingDetails(JoinGym command)
         {
-            joinGymCommandHandler.Handle(command);
+            joinGymHandler.Handle(command);
         }
 
         [Then(@"a gym membership should have been created with an id of (.*)")]
@@ -39,12 +39,6 @@ namespace Gym.Specifications.Steps
         public void ThenThatMembershipShouldBeForAMemberWhoWasBornOn(DateTime dateOfBirth)
         {
             membership.DateOfBirth.Should().Be(DateOfBirth.Parse(dateOfBirth));
-        }
-
-        [Then(@"that membership should have a monthly fee of £(.*)")]
-        public void ThenThatMembershipShouldHaveAMonthlyFeeOf(Decimal fee)
-        {
-            membership.Fee.Should().Be(Money.Parse(fee));
         }
         
         [StepArgumentTransformation]

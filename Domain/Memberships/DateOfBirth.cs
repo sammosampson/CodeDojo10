@@ -1,8 +1,9 @@
-namespace Gym.Domain
-{
-    using System;
-    using SystemDot.Core;
+using System;
+using SystemDot.Core;
+using Gym.Infrastructure;
 
+namespace Gym.Domain.Memberships
+{
     public class DateOfBirth : Equatable<DateOfBirth>
     {
         public static DateOfBirth Parse(DateTime date)
@@ -25,6 +26,11 @@ namespace Gym.Domain
         public override int GetHashCode()
         {
             return date.GetHashCode();
+        }
+
+        public double CalculateAgeInYears(IDateTimeProvider dateTimeProvider)
+        {
+            return (dateTimeProvider.GetCurrentDate() - date).ToYears();
         }
     }
 }

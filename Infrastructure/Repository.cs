@@ -12,19 +12,19 @@
             entities = new ConcurrentDictionary<object, object>();
         }
 
-        public void Add<T>(T toAdd) where T : IdEqualityBase<T>
+        public void Add<T>(T toAdd) where T : AggregateRoot<T>
         {
             entities.TryAdd(toAdd, toAdd);
         }
 
-        private IQueryable<T> Query<T>() where T : IdEqualityBase<T>
+        private IQueryable<T> Query<T>() where T : AggregateRoot<T>
         {
             return entities.Values.OfType<T>().AsQueryable();
         }
 
-        public T GetById<T>(string id) where T : IdEqualityBase<T>
+        public T GetById<T>(string id) where T : AggregateRoot<T>
         {
-            return Query<T>().Single(t => t.Id == id);
+            return Query<T>().Single(t => t.RawId == id);
         }
     }
 }

@@ -15,6 +15,11 @@ namespace Gym.Domain.Memberships
         {
             return from.id.ToString(CultureInfo.InvariantCulture);
         }
+        
+        public static implicit operator int(MembershipId from)
+        {
+            return from.id;
+        }
 
         public static MembershipId Parse(int id)
         {

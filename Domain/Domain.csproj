@@ -53,6 +53,9 @@
     <Reference Include="SystemDot.Ioc">
       <HintPath>..\packages\SystemDotIoc.1.2.0\lib\portable-win+net45+MonoAndroid+MonoTouch+win8\SystemDot.Ioc.dll</HintPath>
     </Reference>
+    <Reference Include="SystemDot.Messaging">
+      <HintPath>..\packages\SystemDotMessaging.2.1.0\lib\net\SystemDot.Messaging.dll</HintPath>
+    </Reference>
     <Reference Include="SystemDot.Reflection">
       <HintPath>..\packages\SystemDotReflection.1.0.1\lib\net\SystemDot.Reflection.dll</HintPath>
     </Reference>
@@ -61,11 +64,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DateOfBirth.cs" />
-    <Compile Include="Memberships\JoinGymCommandHandler.cs" />
+    <Compile Include="Accounts\Account.cs" />
+    <Compile Include="Accounts\AccountEntries.cs" />
+    <Compile Include="Accounts\AccountEntry.cs" />
+    <Compile Include="Accounts\MembershipFeeChangedHandler.cs" />
+    <Compile Include="Accounts\MembershipStartedHandler.cs" />
+    <Compile Include="Bootstrapping\Bootstrapper.cs" />
+    <Compile Include="Bootstrapping\Initialiser.cs" />
+    <Compile Include="Memberships\DateOfBirth.cs" />
+    <Compile Include="Memberships\JoinGymHandler.cs" />
     <Compile Include="Memberships\Membership.cs" />
     <Compile Include="Memberships\MembershipId.cs" />
     <Compile Include="Money.cs" />
+    <Compile Include="Promotions\AgeBasedPromotion.cs" />
+    <Compile Include="Discount.cs" />
+    <Compile Include="Promotions\IPromotion.cs" />
+    <Compile Include="Promotions\PromotionsList.cs" />
+    <Compile Include="Promotions\PromotionsListId.cs" />
+    <Compile Include="Promotions\SetupAgeBasedPromotionHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +97,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

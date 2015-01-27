@@ -1,0 +1,9 @@
+E:\Work\CodeDojo10\Infrastructure\bin\Debug\Gym.Infrastructure.dll
+E:\Work\CodeDojo10\Infrastructure\bin\Debug\Gym.Infrastructure.pdb
+E:\Work\CodeDojo10\Infrastructure\bin\Debug\SystemDot.Core.dll
+E:\Work\CodeDojo10\Infrastructure\bin\Debug\SystemDot.Core.pdb
+E:\Work\CodeDojo10\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+E:\Work\CodeDojo10\Infrastructure\obj\Debug\Gym.Infrastructure.dll
+E:\Work\CodeDojo10\Infrastructure\obj\Debug\Gym.Infrastructure.pdb
+E:\Work\CodeDojo10\Infrastructure\bin\Debug\SystemDot.Messaging.dll
+E:\Work\CodeDojo10\Infrastructure\bin\Debug\SystemDot.Messaging.pdb

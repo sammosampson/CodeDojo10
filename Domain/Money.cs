@@ -9,6 +9,16 @@ namespace Gym.Domain
             return new Money(value);
         }
 
+        public static implicit operator decimal(Money from)
+        {
+            return from.value;
+        }
+
+        public static Money operator *(Money money, Discount discount)
+        {
+            return new Money(money.value - (money.value * (discount / 100)));
+        }
+
         private readonly decimal value;
 
         private Money(decimal value)

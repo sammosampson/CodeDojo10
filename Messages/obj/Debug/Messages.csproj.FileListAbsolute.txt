@@ -1,0 +1,5 @@
+E:\Work\CodeDojo10\Messages\bin\Debug\Gym.Messages.dll
+E:\Work\CodeDojo10\Messages\bin\Debug\Gym.Messages.pdb
+E:\Work\CodeDojo10\Messages\obj\Debug\Messages.csprojResolveAssemblyReference.cache
+E:\Work\CodeDojo10\Messages\obj\Debug\Gym.Messages.dll
+E:\Work\CodeDojo10\Messages\obj\Debug\Gym.Messages.pdb
